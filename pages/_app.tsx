@@ -1,11 +1,20 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import type { AppProps } from 'next/app';
-import { RainbowKitProvider, getDefaultWallets } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, getDefaultWallets, lightTheme, Theme } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import merge from 'lodash.merge';
 
+const myTheme=merge(lightTheme() ,{ 
+  colors:{
+    accentColor:"#000000",
+    connectButtonBackground:"#000000",
+    connectButtonText:"#FFF"
+  },
+
+} as Theme)
 const { chains, provider, webSocketProvider } = configureChains(
   [
     chain.mainnet,
@@ -41,7 +50,7 @@ const wagmiClient = createClient({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider theme={myTheme}chains={chains}>
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>

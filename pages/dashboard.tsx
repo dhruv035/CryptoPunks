@@ -112,7 +112,7 @@ const Dashboard: NextPage = () => {
   let values= Object.values(data);
   console.log('data["001"] :>> ',values[0]);
   return (
-  <div >
+  <div className="flex flex-col">
     <Header/>
     <div className='flex align-center justify-center mx-5 mt-5'>
     <Grid container spacing={2}>
@@ -145,9 +145,11 @@ const Dashboard: NextPage = () => {
     }
     return(
     <Grid item xs={4}>
+      <div className='flex flex-col'>
       <img
-        src={`${imageUrl+item.id+'.png'}?w=120&h=120&fit=crop&auto=format`}
-        srcSet={`${imageUrl+item.id+'.png'}?w=80&h=80&fit=crop&auto=format`}
+      className='mr-10 my-5 self-center'
+        src={`${imageUrl+item.id+'.png'}?w=80&h=80&fit=resize&auto=format`}
+        srcSet={`${imageUrl+item.id+'.png'}?w=80&h=80&fit=resize&auto=format`}
         alt={item.id}
         loading="lazy"
       />
@@ -163,6 +165,7 @@ const Dashboard: NextPage = () => {
       <Typography>
         Owner : {item.owner.id}
       </Typography>
+    </div>
     </Grid>
   )}))}
 </Grid>
