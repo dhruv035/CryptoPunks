@@ -3,8 +3,8 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export const Header = () => {
   return (
-    <div className="flex flex-row-reverse justify-start max-w-8xl mx-auto my-8 items-center">
-      <div>
+    <div className="flex flex-row-reverse justify-start max-w-8xl items-center bg-black">
+      <div className="mx-5 mt-2 mb-4">
         <ConnectButton
           accountStatus="address"
           showBalance={false}
