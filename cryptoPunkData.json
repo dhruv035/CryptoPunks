@@ -1,0 +1,27 @@
+{
+  "000": {
+    "type": "Female",
+    "image": "https://www.larvalabs.com/cryptopunks/cryptopunk000.png",
+    "accessories": ["Green Eye Shadow","Earring","Blonde Bob"]
+  },
+  "001": {
+    "type": "Male",
+    "image": "https://www.larvalabs.com/cryptopunks/cryptopunk001.png",
+    "accessories": ["Smile","Mohawk"]
+  },
+  "002": {
+    "type": "Female",
+    "image": "https://www.larvalabs.com/cryptopunks/cryptopunk002.png",
+    "accessories": ["Wild Hair"]
+  },
+  "003": {
+    "type": "Male",
+    "image": "https://www.larvalabs.com/cryptopunks/cryptopunk003.png",
+    "accessories": ["Wild Hair","Nerd Glasses","Pipe"]    
+  },
+  "004": {
+    "type": "Male",
+    "image": "https://www.larvalabs.com/cryptopunks/cryptopunk004.png",
+    "accessories": ["Big Shades","Wild Hair","Earring","Goat"]
+  }
+}
